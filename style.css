@@ -1,0 +1,186 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+body {
+    background-color: #8a6767; /* Warna latar belakang pink muda */
+    font-family: 'Times New Roman', sans-serif; /* Font default untuk isi pesan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styling Kartu Ucapan */
+.card {
+    background-color: #ab9aa0; /* Warna pink sangat muda untuk kartu */
+    border-radius: 25px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #6d6869; /* Border pink yang lembut */
+}
+
+/* Styling Judul */
+.heading {
+    font-family: 'Arial Black', cursive; /* Menggunakan Pacifico untuk judul */
+    font-size: 2.5rem;
+    color: #605c59; /* Warna pink cerah untuk judul */
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Styling Isi Pesan */
+.message {
+    font-family: 'Times New Roman', sans-serif; /* Menggunakan Poppins untuk isi pesan */
+    font-size: 0.95rem;
+    color: #353131;
+    line-height: 1.6;
+    text-align: justify;
+    white-space: pre-wrap; /* Mempertahankan format baris jika ada */
+}
+
+/* Styling Instruksi Lilin */
+.instruction {
+    margin-top: 30px;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.tap-text {
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* --- Styling Kue Ulang Tahun dan Lilin --- */
+
+.cake-area {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.cake-body {
+    width: 300px;
+    height: 80px;
+    background-color: #8b4513; /* Coklat tua untuk kue */
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-top: 30px; 
+}
+
+.cake {
+    width: 300px;
+    height: 30px;
+    background-color: #ffcc00; /* Kuning cerah untuk topping (mirip gambar) */
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0px); 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 2;
+    padding-bottom: 5px;
+}
+
+/* Styling Lilin (Bagian Merah) */
+.candle-base {
+    width: 15px;
+    height: 50px;
+    background-color: #ff0000; /* Merah cerah untuk lilin */
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-5px);
+}
+
+/* Styling Lidah Api (Kuning) */
+.flame {
+    width: 8px;
+    height: 20px;
+    background-color: #ffff00; /* Kuning untuk api */
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00; /* Efek menyala */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* State Lilin Setelah Ditiup */
+.blown-out .flame {
+    opacity: 0;
+}
+/* --- Styles for Intro Page --- */
+.intro-page {
+    background-color: #886a6a; /* Latar belakang abu-abu muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', sans-serif;
+    flex-direction: column; /* Untuk menumpuk item secara vertikal */
+}
+
+.intro-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #624d4d; /* Latar belakang putih untuk container intro */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.intro-title {
+    font-family: 'Times New Roman', sans-serif; /* Menggunakan Poppins untuk konsistensi */
+    font-size: 2.2rem;
+    font-weight: 700; /* Lebih tebal */
+    color: #9f7575; /* Warna teks gelap */
+    margin-bottom: 15px;
+}
+
+.intro-instruction {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    color: #1b1717; /* Warna teks sedikit lebih terang */
+    margin-bottom: 30px;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e0b0c0; /* Pink lembut, mirip tombol di gambar */
+    color: #866969;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+.next-button:hover {
+    background-color: #cb8499; /* Pink sedikit lebih gelap saat hover */
+}
